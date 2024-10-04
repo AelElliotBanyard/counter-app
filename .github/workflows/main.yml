@@ -24,7 +24,7 @@ jobs:
         env: 
           tag: ${{ github.ref_name }}
         run: |
-            docker build -f ./Dockerfile.frontend --tag ghcr.io/aelelliotbanyard/counter-app-frontend:${tag} .
-            docker build -f ./Dockerfile.backend --tag ghcr.io/aelelliotbanyard/counter-app-backend:${tag} .
-            docker push ghcr.io/aelelliotbanyard/counter-app-frontend:${tag}
-            docker push ghcr.io/aelelliotbanyard/counter-app-backend:${tag}
+            docker build -f ./Dockerfile.frontend --tag ghcr.io/aelelliotbanyard/counter-frontend:${tag} .
+            docker build -f ./Dockerfile.backend --tag ghcr.io/aelelliotbanyard/counter-backend:${tag} .
+            docker push ghcr.io/aelelliotbanyard/counter-frontend:${tag}
+            docker push ghcr.io/aelelliotbanyard/counter-backend:${tag}
